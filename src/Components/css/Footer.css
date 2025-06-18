@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.footer {
+  background-color: #060d1f;
+  color: white;
+  padding: 2rem 1.5rem;
+  font-family: "Anton", sans-serif;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* === About section with logo on left === */
+.about {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left; /* ensures text starts from the left */
+}
+
+.foote_logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* === Contact & credit section merged === */
+.contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-info {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* === Social Media === */
+.social-media {
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+}
+
+.social-media .footer-title {
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  margin: 0 0.3rem;
+}
+
+.social-icon-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.social-icon-image:hover {
+  transform: scale(1.1);
+}
+
+/* === Responsive Behavior === */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact,
+  .footer-info,
+  .social-media {
+    text-align: center;
+  }
+
+  .social-media .footer-title {
+    margin-top: 1rem;
+  }
+}
