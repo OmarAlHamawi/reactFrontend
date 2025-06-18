@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../Css/Login.css";
+import "../css/login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import logo from "../../images/logo/logo2.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,21 +11,19 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  const BASE_URL = import.meta.env.VITE_SERVER_URL;
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:3001/api/auth/login",
-        {
-          email,
-          password,
-        }
-      );
+      const response = await axios.post(`${BASE_URL}/api/auth/login`, {
+        email,
+        password,
+      });
 
       const user = response.data.user;
       localStorage.setItem("user", JSON.stringify(user));
 
-      // ✅ Redirect based on user role
       if (user.role === "admin") {
         navigate("/admin/skills");
       } else {

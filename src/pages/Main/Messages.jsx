@@ -9,9 +9,10 @@ const Messages = () => {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) return;
+    const BASE_URL = import.meta.env.VITE_SERVER_URL;
 
     axios
-      .get(`http://localhost:3001/api/chat/user/${user.id}`)
+      .get(`${BASE_URL}/api/chat/user/${user.id}`)
       .then((res) => {
         setChatData(res.data);
       })

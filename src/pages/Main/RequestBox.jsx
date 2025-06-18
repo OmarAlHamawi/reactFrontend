@@ -7,6 +7,7 @@ import axios from "axios";
 const RequestBox = ({ request }) => {
   const [showMenu, setShowMenu] = useState(false);
   const currentUser = JSON.parse(localStorage.getItem("user"));
+  const BASE_URL = import.meta.env.VITE_SERVER_URL;
 
   const {
     wanted = {},
@@ -23,7 +24,7 @@ const RequestBox = ({ request }) => {
         return;
       }
 
-      const res = await axios.post("http://localhost:3001/api/chat/start", {
+      const res = await axios.post(`${BASE_URL}/api/chat/start`, {
         sender_id: currentUser.id,
         receiver_id: user.id,
       });

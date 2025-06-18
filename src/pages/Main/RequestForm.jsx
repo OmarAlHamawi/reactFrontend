@@ -13,6 +13,7 @@ const RequestForm = ({ mode }) => {
   const [allSkills, setAllSkills] = useState([]);
   const [userSkills, setUserSkills] = useState([]);
   const [user, setUser] = useState(null);
+  const BASE_URL = import.meta.env.VITE_SERVER_URL;
 
   const [formData, setFormData] = useState({
     wanted_skill_id: "",
@@ -38,8 +39,8 @@ const RequestForm = ({ mode }) => {
     const fetchSkills = async () => {
       try {
         const [allRes, userRes] = await Promise.all([
-          axios.get("http://localhost:3001/api/skills"),
-          axios.get(`http://localhost:3001/api/skills/user/${user.id}`),
+          axios.get(`${BASE_URL}/api/skills`),
+          axios.get(`${BASE_URL}/api/skills/user/${user.id}`),
         ]);
         setAllSkills(allRes.data);
         setUserSkills(userRes.data);
@@ -82,14 +83,14 @@ const RequestForm = ({ mode }) => {
 
     try {
       if (mode === "add") {
-        await axios.post("http://localhost:3001/api/requests", {
+        await axios.post(`${BASE_URL}/api/requests`, {
           description: formData.description,
           user_id: user.id,
           wanted_skill_id: formData.wanted_skill_id,
           skill_ids: skill_ids.filter(Boolean),
         });
       } else {
-        await axios.put(`http://localhost:3001/api/requests/${editingData.id}`, {
+        await axios.put(`${BASE_URL}/api/requests/${editingData.id}`, {
           description: formData.description,
           wanted_skill_id: formData.wanted_skill_id,
           user_id: user.id,
