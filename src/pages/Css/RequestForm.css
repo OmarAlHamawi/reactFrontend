@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+/* ===== Base Font Style ===== */
+body {
+  font-family: "Anton", sans-serif;
+}
+
+/* ===== Container ===== */
+.request-container {
+  background-color: #0d1224;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 850px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.request-title {
+  font-size: 26px;
+  margin-bottom: 2rem;
+}
+
+/* ===== Form Layout: 2 columns ===== */
+.request-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ===== Column Handling ===== */
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 1rem;
+}
+
+/* ===== Form Group ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ===== Input and Select Styling ===== */
+input[type="text"],
+select,
+textarea {
+  padding: 5px;
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ===== Textarea Styling ===== */
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* ===== Toggle Switch Group ===== */
+.switch-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.toggle-icon {
+  font-size: 26px;
+  color: #a8bdbf;
+  cursor: pointer;
+}
+
+/* ===== Submit Button ===== */
+.submit-button {
+  margin: 2rem auto 0;
+  width: 200px;
+  padding: 12px 20px;
+  background-color: #f3d487;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #e6c36e;
+}

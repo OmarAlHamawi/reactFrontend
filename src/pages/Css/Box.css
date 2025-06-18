@@ -1,0 +1,170 @@
+/* Box.css - for individual request boxes */
+
+.request-box {
+  background: #0a1121;
+  border-radius: 22px;
+  padding: 1.7rem 2rem 1.2rem 2rem;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 600px;
+  width: 95%;
+  min-height: 220px;
+  position: relative;
+  margin: 0.7rem auto;
+  transition: box-shadow 0.2s;
+}
+.request-box:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.request-box-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.request-box-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 90px;
+}
+
+.request-box-label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  text-transform: lowercase;
+}
+
+.request-box-skill {
+  background: #b7c9d1;
+  color: #222;
+  border-radius: 13px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+  min-width: 70px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.request-box-level {
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: bold;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  text-shadow: 0 1px 2px #0002;
+  opacity: 0.85;
+}
+
+.request-box-arrow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 0.7rem;
+}
+
+.request-box-arrow-line {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: bold;
+  margin: 0.05rem 0;
+  letter-spacing: 1px;
+}
+
+.request-box-message {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: bold;
+  margin-bottom: 1.1rem;
+  margin-top: 0.3rem;
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+}
+
+.request-box-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 0.7rem;
+}
+
+.request-box-btn {
+  background: #f6e3b4;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.3rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.request-box-btn:hover {
+  background: #ffe7a0;
+}
+
+.request-box-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+  font-weight: bold;
+}
+
+.request-box-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.request-box-col.has-col {
+  position: relative;
+}
+
+.hover-skill-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #f8e4a2;
+  color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  min-width: 160px;
+}
+
+.hover-skill-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.hover-skill-list {
+  list-style: disc;
+  padding-left: 16px;
+  margin: 0;
+}

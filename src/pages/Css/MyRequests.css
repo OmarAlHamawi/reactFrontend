@@ -1,0 +1,168 @@
+/* MyRequests.css */
+
+.profile-page {
+  background: #f7f7f7;
+  min-height: 100vh;
+  padding: 2rem 0 0 0;
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-left: 2rem;
+}
+
+.profile-sidebar {
+  background: #0a1121;
+  border-radius: 14px;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 240px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.profile-menu {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.profile-menu div {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.profile-menu div:last-child {
+  text-decoration: underline;
+}
+
+.requests-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+
+.request-card {
+  background: #0a1121;
+  border-radius: 14px;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  min-width: 420px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.request-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request-label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+}
+
+.request-skill {
+  background: #a6bbc2;
+  color: #222;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  min-width: 70px;
+  text-align: center;
+}
+
+.request-arrow {
+  color: #cfd8dc;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+.request-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.update-btn,
+.delete-btn {
+  background: #f6e3b4;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.update-btn:hover,
+.delete-btn:hover {
+  background: #ffe7a0;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #f5d77f;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #ffe49c;
+}
+.delete-btn:hover {
+  background-color: #f87171;
+  color: white;
+}
