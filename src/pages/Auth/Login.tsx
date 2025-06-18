@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../css/login.css";
+import "../Css/login.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import logo from "../../images/logo/logo2.png";
 import { Link, useNavigate } from "react-router-dom";
