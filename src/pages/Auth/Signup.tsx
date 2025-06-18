@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import "../css/Signup.css";
+import "../Css/Signup.css";
 import logo from "../../images/logo/logo2.png";
 
 const Signup = () => {
