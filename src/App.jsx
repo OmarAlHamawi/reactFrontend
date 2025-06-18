@@ -9,20 +9,20 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Main Components
-import LandingPage from "./Components/Main/LandingPage";
-import Signup from "./Components/auth/Signup";
-import Login from "./Components/auth/Login";
-import RequestForm from "./Components/RequestForm";
-import Footer from "./Components/Main/Footer";
-import Nav from "./Components/Main/Nav";
-import MyRequests from "./Components/Main/MyRequests";
-import Profile from "./Components/Main/Profile";
-import AllRequests from "./Components/Main/AllRequests";
-import Messages from "./Components/Main/Messages";
+import LandingPage from "./pages/Main/LandingPage";
+import Signup from "./pages/Auth/Signup";
+import Login from "./pages/Auth/Login";
+import RequestForm from "./pages/Main/RequestForm";
+import Footer from "./Components/Footer";
+import Nav from "./Components/Nav";
+import MyRequests from "./pages/Main/MyRequests";
+import Profile from "./pages/Main/Profile";
+import AllRequests from "./pages/Main/AllRequests";
+import Messages from "./pages/Main/Messages";
 
 // Admin Components
-import SkillManager from "./Components/admin/SkillManager";
-import AdminNav from "./Components/admin/AdminNav";
+import SkillManager from "./pages/admin/SkillManager";
+import AdminNav from "./Components/AdminNav";
 
 const AppRoutes = () => {
   const location = useLocation();
