@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton:wght@400;700&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Anton", Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.landing-page {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  text-align: left;
+  padding: 32px 0 0 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hero-text {
+  max-width: 520px;
+  padding-left: 32px;
+}
+
+.headline {
+  font-family: "Anton", Arial, sans-serif;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+.headline span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  font-family: "Anton", Arial, sans-serif;
+}
+
+.subheadline {
+  font-family: "Anton", Arial, sans-serif;
+  font-size: 1.15rem;
+  margin-bottom: 1.2em;
+  color: #222;
+}
+
+.cta-button {
+  background: #d6b24c;
+  color: #222;
+  font-family: "Anton", Arial, sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 1.5em;
+  transition: background 0.2s;
+}
+.cta-button:hover {
+  background: #bfa13e;
+}
+
+.hero .about-image {
+  display: block;
+  margin: 0 32px 0 0;
+  width: 180px;
+  max-width: 100%;
+  margin-top: 10px;
+  border: 2px solid #222;
+  border-radius: 10px;
+  background: #fff;
+}
+
+section {
+  margin-top: 48px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about,
+.why,
+.how {
+  padding: 0;
+  width: 100vw;
+}
+
+.about h2,
+.why h2,
+.how h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  font-family: "Anton", Arial, sans-serif;
+  width: 100%;
+}
+
+.about-content,
+.why-content,
+.how-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.about-image,
+.why-image,
+.how-image {
+  width: 340px;
+  max-width: 90vw;
+  border-radius: 10px;
+  margin-bottom: 1.2em;
+  margin-top: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border: 2px solid #222;
+  background: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-description,
+.why-description,
+.how-description {
+  font-family: "Anton", Arial, sans-serif;
+  font-size: 1.08rem;
+  color: #222 !important;
+  text-align: center;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0 0 0;
+    gap: 12px;
+  }
+  .hero-text {
+    padding-left: 0;
+    max-width: 98vw;
+  }
+  .hero .about-image {
+    margin: 0 auto 0 auto;
+    margin-top: 10px;
+  }
+  section {
+    margin-top: 32px;
+    padding: 0;
+  }
+  .about-image,
+  .why-image,
+  .how-image {
+    width: 98vw;
+    min-width: 0;
+    max-width: 98vw;
+  }
+}

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.signup-box {
+  background-color: #060d1f;
+
+  border-radius: 12px;
+  padding: 3rem;
+  width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.signup-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.signup-title {
+  color: white;
+  font-size: 2rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.signup-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.signup-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.signup-field label {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.signup-field input {
+  padding: 0.6rem 2.5rem 0.6rem 0.6rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 0.6rem 0rem 0.6rem 0.4rem; /* Add right padding for eye icon */
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 2;
+  pointer-events: all;
+}
+
+.signup-button {
+  background-color: #f5d88f;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-family: "Anton", sans-serif;
+}
+
+.login-link {
+  color: white;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-link span {
+  color: #f5d88f;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .signup-box {
+    width: 90%;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+  }
+
+  .signup-title {
+    font-size: 1.5rem;
+    margin-top: 70px;
+  }
+
+  .signup-row {
+    flex-direction: column;
+  }
+
+  .signup-field {
+    width: 100%;
+  }
+
+  .signup-button {
+    width: 100%;
+  }
+
+  .logo-wrapper {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+
+  .signup-logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .eye-icon {
+    font-size: 1.1rem;
+  }
+}

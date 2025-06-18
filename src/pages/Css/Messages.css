@@ -1,0 +1,107 @@
+/* Messages.css */
+
+.messages-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
+.messages-card {
+  background: #070d1a;
+  border-radius: 16px;
+  width: 420px;
+  min-height: 500px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.messages-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #070d1a;
+  padding: 1.2rem 0.5rem 1.2rem 1.5rem;
+  border-radius: 16px 16px 0 0;
+}
+
+.messages-header-col {
+  flex: 1;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Anton", Arial, sans-serif;
+}
+
+.messages-header-col:last-child {
+  text-align: right;
+}
+
+.messages-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.5rem 0.7rem 1.2rem;
+  background: #11182a;
+  font-size: 1.08rem;
+  color: #fff;
+  font-family: "Anton", Arial, sans-serif;
+}
+
+.messages-row.alt {
+  background: #253356;
+}
+
+.messages-user {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.messages-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  background: #fff;
+}
+
+.messages-username {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.08rem;
+}
+
+.messages-phone {
+  flex: 1;
+  text-align: right;
+  color: #fff;
+  font-size: 1.08rem;
+  font-family: "Anton", Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .messages-card {
+    width: 98vw;
+    min-width: 0;
+    padding: 0;
+  }
+  .messages-header-row,
+  .messages-row {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
