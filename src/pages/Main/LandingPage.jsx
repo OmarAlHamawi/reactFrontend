@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import the navigate hook
-import "../css/LandingPage.css";
+import "./css/LandingPage.css";
 
 import ShellehBridgelearn from "../../images/landingpage/ShellehBridgelearn.png";
 import WhoIsShellehGroup from "../../images/landingpage/WhoIsShellehGroup.png";
