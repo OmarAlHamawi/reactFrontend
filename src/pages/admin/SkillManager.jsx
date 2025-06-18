@@ -4,9 +4,10 @@ import SkillForm from "./SkillForm";
 const SkillManager = () => {
   const [skills, setSkills] = useState([]);
   const [editingSkill, setEditingSkill] = useState(null);
+  const BASE_URL = import.meta.env.VITE_SERVER_URL;
 
   const fetchSkills = async () => {
-    const res = await fetch("http://localhost:3001/api/admin/skills");
+    const res = await fetch(`${BASE_URL}/api/admin/skills`);
     const data = await res.json();
     setSkills(data);
   };
@@ -16,7 +17,7 @@ const SkillManager = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:3001/api/admin/skills/${id}`, {
+    await fetch(`${BASE_URL}/api/admin/skills/${id}`, {
       method: "DELETE",
     });
     fetchSkills();

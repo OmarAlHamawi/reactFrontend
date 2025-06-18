@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import "../Css/Signup.css";
+import "../css/Signup.css";
 import logo from "../../images/logo/logo2.png";
 
 const Signup = () => {
@@ -23,14 +23,12 @@ const Signup = () => {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:3001/api/auth/signup",
-        {
-          name,
-          email,
-          password,
-        }
-      );
+      const BASE_URL = import.meta.env.VITE_SERVER_URL;
+      const response = await axios.post(`${BASE_URL}/api/auth/signup`, {
+        name,
+        email,
+        password,
+      });
 
       console.log("Signup successful:", response.data);
       // Optionally redirect to login or dashboard

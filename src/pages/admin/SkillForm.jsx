@@ -10,10 +10,12 @@ const SkillForm = ({ skill, onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const BASE_URL = import.meta.env.VITE_SERVER_URL;
+    
     const method = skill ? "PUT" : "POST";
     const url = skill
-      ? `http://localhost:3001/api/admin/skills/${skill.id}`
-      : "http://localhost:3001/api/admin/skills";
+      ? `${BASE_URL}/api/admin/skills/${skill.id}`
+      : `${BASE_URL}/api/admin/skills`;
 
     await fetch(url, {
       method,

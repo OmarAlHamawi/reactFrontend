@@ -99,3 +99,45 @@ textarea {
 .submit-button:hover {
   background-color: #e6c36e;
 }
+
+@media (max-width: 600px) {
+  .request-container {
+    padding: 1rem 0.5rem;
+    margin: 1rem 0.2rem;
+    max-width: 98vw;
+    border-radius: 16px;
+  }
+  .request-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .request-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    gap: 0.7rem;
+  }
+  input[type="text"],
+  select,
+  textarea {
+    font-size: 1rem;
+    height: 38px;
+    padding: 8px;
+  }
+  textarea {
+    height: 90px;
+  }
+  .submit-button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-top: 1.2rem;
+  }
+  .switch-group {
+    justify-content: center;
+    gap: 12px;
+  }
+}

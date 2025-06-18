@@ -10,6 +10,7 @@ const MyRequests = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const BASE_URL = import.meta.env.VITE_SERVER_URL;
 
   // Load user info from localStorage
   useEffect(() => {
@@ -28,10 +29,9 @@ const MyRequests = () => {
             console.log("Fetching requests for user:", user.id);
 
       try {
-        const res = await axios.get(`http://localhost:3001/api/requests/user/${user.id}`);
+        const res = await axios.get(`${BASE_URL}/api/requests/user/${user.id}`);
         console.log("Raw backend response:", res.data);
 
-        // ✅ Format backend response into nested shape the UI expects
         const formatted = res.data.map((r) => ({
           id: r.id,
           wanted: { skill: r.wanted_skill },
@@ -67,7 +67,7 @@ const MyRequests = () => {
     if (!window.confirm("Are you sure you want to delete this request?")) return;
 
     try {
-      await axios.delete(`http://localhost:3001/api/requests/${id}`, {
+      await axios.delete(`${BASE_URL}/api/requests/${id}`, {
         data: { user_id: user.id },
       });
       setRequests(prev => prev.filter(r => r.id !== id));

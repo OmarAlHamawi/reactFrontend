@@ -13,13 +13,13 @@ const Profile = () => {
   const [allSkills, setAllSkills] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
   const location = useLocation();
-
+  const BASE_URL = import.meta.env.VITE_SERVER_URL;
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [userRes, skillsRes] = await Promise.all([
-          axios.get(`http://localhost:3001/api/profile/${user.id}`),
-          axios.get("http://localhost:3001/api/skills"),
+          axios.get(`${BASE_URL}/api/profile/${user.id}`),
+          axios.get(`${BASE_URL}/api/skills`),
         ]);
 
         setProfile({
@@ -56,7 +56,7 @@ const Profile = () => {
     e.preventDefault();
     if (editMode) {
       try {
-        await axios.put(`http://localhost:3001/api/profile/${user.id}`, {
+        await axios.put(`${BASE_URL}/api/profile/${user.id}`, {
           user_id: user.id,
           name: profile.name,
           email: profile.email,

@@ -1,0 +1,63 @@
+.admin-nav {
+  padding: 12px 24px;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-title {
+  margin: 0;
+  font-weight: 500;
+}
+
+.weather-info {
+  font-size: 16px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+  .admin-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 8px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .admin-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .weather-info {
+    font-size: 0.95rem;
+    margin: 0 0 6px 0;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}

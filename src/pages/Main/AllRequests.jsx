@@ -21,8 +21,9 @@ const AllRequests = () => {
 
     const fetchRequests = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/api/requests?excludeUser=${currentUserId}`);
-        setRequests(res.data); // ✅ use backend data as-is
+        const BASE_URL = import.meta.env.VITE_SERVER_URL;
+        const res = await axios.get(`${BASE_URL}/api/requests?excludeUser=${currentUserId}`);
+        setRequests(res.data); 
       } catch (err) {
         console.error("Failed to fetch requests:", err);
       }
